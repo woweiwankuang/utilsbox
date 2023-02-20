@@ -12,5 +12,5 @@ export const icon = {
 
 export const file = {
     /** 基础代码模版 */
-    base_code_template_config: 'https://utilsbox.oss-cn-hangzhou.aliyuncs.com/base_code_template_config.json'
+    base_code_template_config: './data.json'
 }
