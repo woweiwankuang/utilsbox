@@ -25,7 +25,7 @@ export default class AppsPopover extends Component {
 
         return (
             <div style={{ display: 'flex', alignItems: 'center', padding: 0 }}>
-                <Popover
+                {/* <Popover
                     placement="bottomRight"
                     content={(
                         <div style={{ width: 600, ...Css.transverse, flexFlow: 'wrap', justifyContent: 'center' }}>
@@ -45,9 +45,9 @@ export default class AppsPopover extends Component {
                                 <img style={{ width: 30, height: 30, marginRight: 8, background: '#1890ff', borderRadius: 6, padding: 2 }} src='https://utilsbox.oss-cn-hangzhou.aliyuncs.com/apps-f.png' />
                             </Badge>
                         }>
-                        {/* 工具箱 */}
+                        工具箱
                     </Button>
-                </Popover>
+                </Popover> */}
             </div>
         )
     }

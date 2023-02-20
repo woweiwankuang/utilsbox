@@ -25,7 +25,7 @@ class App extends Component {
             this.currentRoute = routeItem;
             this.currentPage = routeItem.page;
         }
-        document.title = this.currentRoute.appName + ' - 猿猿工具';
+        document.title = this.currentRoute.appName;
     }
 
     render() {
