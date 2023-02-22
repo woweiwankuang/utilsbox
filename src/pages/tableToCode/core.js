@@ -68,7 +68,7 @@ export const distinguishCreateTableSql = (sql) => {
         let rowTrim = row.trim();
         let columns = rowTrim.substring(0, rowTrim.length - 1).split(' ');
 
-        // 取引擎和编码方式
+        // 取引擎、编码方式、表名
         if (row.indexOf('ENGINE') >= 0) {
             for (let column of columns) {
                 if (column.indexOf('ENGINE=') >= 0) {
@@ -76,7 +76,11 @@ export const distinguishCreateTableSql = (sql) => {
                 }
                 if (column.indexOf('CHARSET=') >= 0) {
                     table.encoded = column.replace('CHARSET=', '');
-                    table.encoded = column.replace(';', '');
+                    table.encoded = table.encoded.replace(';', '');
+                }
+                if (column.indexOf('COMMENT=') >= 0) {
+                    table.tableDesc = column.replace('COMMENT=', '');
+                    table.tableDesc = table.tableDesc.replaceAll('\'', '');
                 }
             }
             continue;
